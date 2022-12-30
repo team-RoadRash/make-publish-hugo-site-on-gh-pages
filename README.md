@@ -11,10 +11,10 @@
   
 - Check if your local repo <organization-name>.github.io has a config.toml file or not. If not create one with basic config info:
   
-  baseURL = 'https://<organization-name>.github.io'
-  languageCode = 'en-us'
-  theme = 'toha'
-  title = 'Example Website'
+        baseURL = 'https://<organization-name>.github.io'
+        languageCode = 'en-us'
+        theme = 'toha'
+        title = 'Example Website'
  
 - After editing the config.toml file, go back to git bash to run:
   
