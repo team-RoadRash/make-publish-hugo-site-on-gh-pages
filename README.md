@@ -24,8 +24,10 @@
   
       mkdir .github && cd .github
       mkdir workflows && cd workflows
-      notepad deploy-site.yml (Opens notepad, save the following content into it, close and return to git bash)
-  
+      notepad deploy-site.yml 
+
+(Opens notepad, save the following content into it, close and return to git bash)
+
             name: Deploy to Github Pages
 
             # run when a commit is pushed to "source" branch
@@ -59,7 +61,8 @@
                   publish_branch: gh-pages
                   publish_dir: ./public
   
-      (Make sure you are in the root directory)
+(Make sure you are in the root directory)
+      
       git remote -v (should show the fetch and origin, if doesn't show then execute the next command else skip)
       git remote add origin https://github.com/<organization-name>/<organization-name>.github.io.git
       git add .
