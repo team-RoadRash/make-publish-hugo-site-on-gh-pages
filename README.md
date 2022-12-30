@@ -1,6 +1,7 @@
 - Create an organization from your account on Github
 - Under the organization make a repository named <organization-name>.github.io (all small caps and empty repo without readme file)
 - Go to a desired location in your local system and open git bash there:
+  
   git clone https://github.com/<organization-name>/<organization-name>.github.io.git
   cd <organization-name>.github.io.git
   git init
@@ -9,15 +10,18 @@
   git submodule add https://github.com/hugo-toha/toha.git themes/toha  (this is an example theme from hugo templates, can change accordingly)
 
 - Check if your local repo <organization-name>.github.io has a config.toml file or not. If not create one with basic config info:
+  
   baseURL = 'https://<organization-name>.github.io'
   languageCode = 'en-us'
   theme = 'toha'
   title = 'Example Website'
  
 - After editing the config.toml file, go back to git bash to run:
+  
   hugo server -t toha -w (creates a localhost website - use the address that comes up to view if the site is seen as desired)
  
 - Update config.toml accordingly to change how the site looks, then follow:
+  
   mkdir .github && cd .github
   mkdir workflows && cd workflows
   notepad deploy-site.yml (Opens notepad, save the following content into it, close and return to git bash)
@@ -29,7 +33,6 @@
       push:
         branches:
         - main
-
     jobs:
       deploy:
         runs-on: ubuntu-18.04
@@ -39,18 +42,15 @@
           with:
             submodules: true  # Fetch Hugo themes (true OR recursive)
             fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-
         # install Hugo
         - name: Setup Hugo
           uses: peaceiris/actions-hugo@v2.5.0
           with:
             hugo-version: 'latest'
             extended: true
-
         # build website
         - name: Build
           run: hugo --minify
-
         # push the generated content into the `gh-pages` branch.
         - name: Deploy
           uses: peaceiris/actions-gh-pages@v3.8.0
