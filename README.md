@@ -2,17 +2,12 @@
 - Under the organization make a repository named <organization-name>.github.io (all small caps and empty repo without readme file)
 - Go to a desired location in your local system and open git bash there:
   
-  git clone https://github.com/<organization-name>/<organization-name>.github.io.git
-  
-  cd <organization-name>.github.io.git
-  
-  git init
-  
-  git checkout -b main
-  
-  hugo new site ./ -f --force (TOML file type is default, if using YAML, write -f=yaml)
-  
-  git submodule add https://github.com/hugo-toha/toha.git themes/toha  (this is an example theme from hugo templates, can change accordingly)
+    git clone https://github.com/<organization-name>/<organization-name>.github.io.git
+    cd <organization-name>.github.io.git
+    git init
+    git checkout -b main
+    hugo new site ./ -f --force (TOML file type is default, if using YAML, write -f=yaml)
+    git submodule add https://github.com/hugo-toha/toha.git themes/toha  (this is an example theme from hugo templates, can change accordingly)
 
 - Check if your local repo <organization-name>.github.io has a config.toml file or not. If not create one with basic config info:
   
