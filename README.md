@@ -1,1 +1,1 @@
-# website
+-> Create an organization from your account on Github
