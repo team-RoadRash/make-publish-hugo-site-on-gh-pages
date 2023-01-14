@@ -4,9 +4,9 @@
 
       git clone https://github.com/<organization-name>/<organization-name>.github.io.git
       cd <organization-name>.github.io.git
+      hugo new site ./ -f --force (TOML file type is default, if using YAML, write -f=yaml)
       git init
       git checkout -b main
-      hugo new site ./ -f --force (TOML file type is default, if using YAML, write -f=yaml)
       git submodule add https://github.com/hugo-toha/toha.git themes/toha  (this is an example theme from hugo templates, can change accordingly)
   
 - Check if your local repo <organization-name>.github.io has a config.toml file or not. If not create one with basic config info:
