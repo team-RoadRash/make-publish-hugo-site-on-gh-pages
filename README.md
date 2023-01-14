@@ -69,7 +69,7 @@
       git commit -m "Adding all files"
       git push origin main (if you refresh your repo online, should be able to see all the files pushed here)
       git checkout -b gh-pages
-      git push --set -upstream origin gh-pages
+      git push --set-upstream origin gh-pages
       git checkout main
 
 - In settings of this repository, under Code and automation section select Pages
